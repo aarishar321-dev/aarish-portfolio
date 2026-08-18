@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarish Ahamed M | Data Science • ML • AI</title>
+    <meta name="description" content="Portfolio of Aarish Ahamed M, specializing in Data Science, Machine Learning, and AI Automation.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Premium Page Loader -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span class="loader-text">Loading Portfolio...</span>
+        </div>
+    </div>
+
+    <!-- Background Interactivity -->
+    <div class="bg-glow-container">
+        <div class="glow-blob blob-blue"></div>
+        <div class="glow-blob blob-green"></div>
+        <div class="noise-overlay"></div>
+    </div>
+    
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Sticky Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <span>Aarish Ahamed M</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Switch -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="#contact" class="btn btn-primary magnetic" id="nav-hire-btn">Hire Me</a>
+            </div>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <div class="hero-badge reveal">
+                        <span class="badge-dot"></span>
+                        <span>Available for ML & AI Roles</span>
+                    </div>
+                    <h1 class="hero-title reveal">
+                        Helping Business make smarter decision with <span class="text-green">data</span>
+                    </h1>
+                    <p class="hero-description reveal">
+                        Aspiring professional specializing in Data Science, Machine Learning, and AI Automation. I build practical predictive models, conduct exploratory data analysis, and automate workflows to solve business-oriented challenges.
+                    </p>
+                    <div class="hero-actions reveal" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+                        <a href="#projects" class="btn btn-primary btn-lg magnetic">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary btn-lg magnetic">Hire Me</a>
+                        
+                        <!-- Hero Social Icons -->
+                        <div class="hero-socials" style="display: flex; gap: 14px; margin-left: 8px;">
+                            <a href="https://in.linkedin.com/in/aarish-ahamed-m-8109a92a6" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link-icon" style="color: var(--text-secondary); transition: var(--transition-fast);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                            <a href="https://github.com/aarishar321-dev" target="_blank" rel="noopener" aria-label="GitHub" class="social-link-icon" style="color: var(--text-secondary); transition: var(--transition-fast);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="https://www.kaggle.com/aarishar321" target="_blank" rel="noopener" aria-label="Kaggle" class="social-link-icon" style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: var(--text-secondary); transition: var(--transition-fast);">
+                                <span style="font-family: var(--font-heading); font-weight: 800; font-size: 0.9rem; letter-spacing: -0.05em; line-height: 1;">K</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual reveal">
+                    <div class="portrait-container magnetic-container" data-tilt>
+                        <div class="portrait-glow"></div>
+                        <img src="assets/portrait.jpg" alt="Aarish Ahamed M Portrait" class="portrait-img">
+                    </div>
+                    <!-- Abstract Float Element -->
+                    <div class="floating-element element-1">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="28" stroke="url(#el-grad1)" stroke-width="2" stroke-dasharray="4 4"/>
+                            <defs>
+                                <linearGradient id="el-grad1" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#0066FF" stop-opacity="0.8"/>
+                                    <stop offset="1" stop-color="#00E676" stop-opacity="0.2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="floating-element element-2">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="36" height="36" rx="8" stroke="url(#el-grad2)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="el-grad2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00E676" stop-opacity="0.8"/>
+                                    <stop offset="1" stop-color="#0066FF" stop-opacity="0.2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container container-sm">
+                <div class="section-header">
+                    <span class="subtitle">Brief Introduction</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="paragraph-lead">
+                            I am a Data Science student and aspiring professional building practical expertise in Machine Learning, exploratory data analysis, and workflow automation.
+                        </p>
+                        <p>
+                            I focus on bridging data insights and business outcomes. My technical foundation spans building predictive models, cleaning messy datasets, and developing automated workflows (like WhatsApp automation) to streamline customer interactions. I am passionate about continuous learning and translating mathematical theories into practical, valuable applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="subtitle">Case Studies</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+
+                <div class="projects-grid-layout">
+                    <!-- Project 1: Advanced Customer Churn Prediction -->
+                    <div class="project-mini-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow"></div>
+                        <div class="project-img-container">
+                            <img src="assets/Advanced%20Churn%20Prediction.png" alt="Advanced Customer Churn Prediction" class="project-img">
+                            <div class="card-data-sparkline">
+                                <svg viewBox="0 0 100 20" class="sparkline-svg">
+                                    <path d="M0 12 C 15 15, 30 2, 50 10 T 80 4 T 100 14" fill="none" stroke="url(#spark-grad-blue)" stroke-width="1" stroke-linecap="round"></path>
+                                    <defs>
+                                        <linearGradient id="spark-grad-blue" x1="0" y1="0" x2="100" y2="0">
+                                            <stop offset="0%" stop-color="#0066FF"></stop>
+                                            <stop offset="100%" stop-color="#00E676"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-lbl">Machine Learning / Business Analytics</span>
+                            <h3 class="project-tit">Advanced Customer Churn Prediction</h3>
+                            <p class="project-problem-text"><strong>Problem:</strong> Identifying subscription users at high risk of churning to execute proactive customer retention strategies.</p>
+                            <p class="project-desc-text">Constructed classification models prioritizing customer risk value, comparing performance to provide retention insights.</p>
+                            <div class="project-meta-pills">
+                                <span>XGBoost</span>
+                                <span>Scikit-Learn</span>
+                                <span>Streamlit</span>
+                                <span>EDA</span>
+                            </div>
+                            <div class="project-btn-actions">
+                                <a href="https://github.com/aarishar321-dev/Advanced-Customer-Churn-Prediction.git" target="_blank" rel="noopener" class="btn btn-secondary btn-xs">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    GitHub
+                                </a>
+                                <a href="https://advanced-customer-churn-prediction-vgs228kc46bqsvzct7k5ac.streamlit.app/" target="_blank" rel="noopener" class="btn btn-secondary btn-xs">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: WhatsApp Traditional Chatbot (Placeholder Only) -->
+                    <div class="project-mini-card project-placeholder-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow"></div>
+                        <div class="project-placeholder-content">
+                            <div class="placeholder-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="project-tit">WhatsApp Traditional Chatbot</h3>
+                            <span class="placeholder-tag">Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Rossmann Sales Forecasting -->
+                    <div class="project-mini-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow" style="--glow-color: rgba(0, 230, 118, 0.12);"></div>
+                        <div class="project-img-container">
+                            <img src="assets/Sales%20Forecasting.png" alt="Rossmann Sales Forecasting" class="project-img">
+                            <div class="card-data-sparkline">
+                                <svg viewBox="0 0 100 20" class="sparkline-svg">
+                                    <path d="M0 18 Q 20 2, 40 12 T 70 8 T 100 4" fill="none" stroke="url(#spark-grad-green)" stroke-width="1" stroke-linecap="round"></path>
+                                    <defs>
+                                        <linearGradient id="spark-grad-green" x1="0" y1="0" x2="100" y2="0">
+                                            <stop offset="0%" stop-color="#00E676"></stop>
+                                            <stop offset="100%" stop-color="#0066FF"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-lbl">Time Series / Machine Learning</span>
+                            <h3 class="project-tit">Rossmann Sales Forecasting</h3>
+                            <p class="project-problem-text"><strong>Problem:</strong> Forecasting daily store sales to support operational decisions, inventory management, and store staffing efficiency.</p>
+                            <p class="project-desc-text">Built time-series forecasting models to predict sales volumes across multiple store profiles, deployed as an interactive Streamlit application.</p>
+                            <div class="project-meta-pills">
+                                <span>Python</span>
+                                <span>XGBoost</span>
+                                <span>Scikit-Learn</span>
+                                <span>Streamlit</span>
+                            </div>
+                            <div class="project-btn-actions">
+                                <a href="https://github.com/aarishar321-dev/Rossmann-Sales-Forecasting.git" target="_blank" rel="noopener" class="btn btn-secondary btn-xs">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    GitHub
+                                </a>
+                                <a href="https://rossmann-sales-forecasting-dqwjrlew65mlepcpfa8adz.streamlit.app/" target="_blank" rel="noopener" class="btn btn-secondary btn-xs">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: E-Commerce Pipeline ETL -->
+                    <div class="project-mini-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow"></div>
+                        <div class="project-img-container">
+                            <img src="assets/ETL%20Price%20tracker%20dashboard.png" alt="E-Commerce Pipeline ETL" class="project-img">
+                            <div class="card-data-sparkline">
+                                <svg viewBox="0 0 100 20" class="sparkline-svg">
+                                    <path d="M0 10 Q 15 5, 30 15 T 60 5 T 90 12 L 100 8" fill="none" stroke="url(#spark-grad-blue-etl)" stroke-width="1" stroke-linecap="round"></path>
+                                    <defs>
+                                        <linearGradient id="spark-grad-blue-etl" x1="0" y1="0" x2="100" y2="0">
+                                            <stop offset="0%" stop-color="#0066FF"></stop>
+                                            <stop offset="100%" stop-color="#00E676"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-lbl">Data Engineering / ETL</span>
+                            <h3 class="project-tit">E-Commerce Pipeline ETL</h3>
+                            <p class="project-problem-text"><strong>Problem:</strong> Extracting, transforming, and centralizing raw, volatile product data from online stores to build a clean pricing dataset.</p>
+                            <p class="project-desc-text">Developed a robust pipeline that automates daily web scraping, cleans unstructured product feeds, maps data schemas, and loads structured tables into MySQL.</p>
+                            <div class="project-meta-pills">
+                                <span>Python</span>
+                                <span>BeautifulSoup</span>
+                                <span>MySQL</span>
+                                <span>Pandas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Journey Section (Replacing traditional skills cards) -->
+        <section id="skills" class="journey-section scroll-reveal">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="subtitle">MY ARSENAL</span>
+                    <h2 class="section-title">Technical Expertise</h2>
+                </div>
+                
+                <div class="journey-wrapper">
+                    <!-- Glassmorphic Grid Texture Background -->
+                    <div class="journey-grid-texture"></div>
+                    <div class="journey-glow-overlay"></div>
+                    
+                    <!-- SVG Responsive Learning Curve Graph -->
+                    <div class="svg-journey-container">
+                        <svg id="journey-svg" viewBox="0 0 1000 420" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="curve-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#3DDC97" />
+                                    <stop offset="12.5%" stop-color="#4A90D9" />
+                                    <stop offset="25%" stop-color="#61DAFB" />
+                                    <stop offset="37.5%" stop-color="#2ECC71" />
+                                    <stop offset="50%" stop-color="#00B4D8" />
+                                    <stop offset="62.5%" stop-color="#A78BFA" />
+                                    <stop offset="75%" stop-color="#FF6B6B" />
+                                    <stop offset="87.5%" stop-color="#F2C14E" />
+                                    <stop offset="100%" stop-color="#FF9F1C" />
+                                </linearGradient>
+                                <linearGradient id="shimmer-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#3DDC97" stop-opacity="0.1"/>
+                                    <stop offset="50%" stop-color="#FAFAFA" stop-opacity="0.7"/>
+                                    <stop offset="100%" stop-color="#FF9F1C" stop-opacity="0.1"/>
+                                </linearGradient>
+                                <!-- Multi-color glows for nodes -->
+                                <filter id="glow-node" x="-40%" y="-40%" width="180%" height="180%">
+                                    <feGaussianBlur stdDeviation="6" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+
+                            <!-- Background Track Line -->
+                            <path class="journey-track" d="M 50,370 C 102.5,350 102.5,330 155,330 S 207.5,290 260,290 S 312.5,250 365,250 S 417.5,210 470,210 S 522.5,170 575,170 S 627.5,130 680,130 L 725,122" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="7" />
+
+                            <!-- Active Curved Line (Drawn dynamically via stroke-dashoffset) -->
+                            <path id="active-journey-curve" class="journey-curve" d="M 50,370 C 102.5,350 102.5,330 155,330 S 207.5,290 260,290 S 312.5,250 365,250 S 417.5,210 470,210 S 522.5,170 575,170 S 627.5,130 680,130 L 725,122" fill="none" stroke="url(#curve-gradient)" stroke-width="5" stroke-linecap="round" stroke-dasharray="900" stroke-dashoffset="900" />
+                            
+                            <!-- Shimmering overlay line segment -->
+                            <path id="shimmer-journey-curve" class="journey-curve-shimmer" d="M 50,370 C 102.5,350 102.5,330 155,330 S 207.5,290 260,290 S 312.5,250 365,250 S 417.5,210 470,210 S 522.5,170 575,170 S 627.5,130 680,130 L 725,122" fill="none" stroke="url(#shimmer-gradient)" stroke-width="5" stroke-dasharray="80 820" stroke-dashoffset="900" opacity="0" />
+
+                            <!-- End arrow head -->
+                            <path class="journey-arrow" d="M 725,122 L 718,117 M 725,122 L 718,127" fill="none" stroke="#FF6B6B" stroke-width="2" stroke-linecap="round" />
+
+                            <!-- End Label "Journey Continues..." -->
+                            <text x="735" y="126" class="journey-continues-text" fill="#FF6B6B">Journey Continues...</text>
+
+                            <!-- Data Science Mathematical Plot Coordinates & Ticks (Creative Background) -->
+                            <!-- Axis Lines -->
+                            <line class="plot-axis" x1="30" y1="395" x2="970" y2="395" stroke-width="1.5" />
+                            <line class="plot-axis" x1="30" y1="30" x2="30" y2="395" stroke-width="1.5" />
+                            
+                            <!-- X Axis Ticks & Labels -->
+                            <g class="plot-axis-ticks" font-size="8" font-family="monospace">
+                                <line x1="50" y1="395" x2="50" y2="400" stroke-width="1" />
+                                <text x="50" y="412" text-anchor="middle">t₀</text>
+
+                                <line x1="260" y1="395" x2="260" y2="400" stroke-width="1" />
+                                <text x="260" y="412" text-anchor="middle">0.25</text>
+
+                                <line x1="470" y1="395" x2="470" y2="400" stroke-width="1" />
+                                <text x="470" y="412" text-anchor="middle">0.50</text>
+
+                                <line x1="680" y1="395" x2="680" y2="400" stroke-width="1" />
+                                <text x="680" y="412" text-anchor="middle">0.75</text>
+
+                                <line x1="890" y1="395" x2="890" y2="400" stroke-width="1" />
+                                <text x="890" y="412" text-anchor="middle">1.0</text>
+
+                                <text class="plot-label-dim" x="965" y="388" text-anchor="end" font-weight="bold">progression_vector (t)</text>
+                            </g>
+
+                            <!-- Y Axis Ticks & Labels -->
+                            <g class="plot-axis-ticks" font-size="8" font-family="monospace">
+                                <line x1="25" y1="370" x2="30" y2="370" stroke-width="1" />
+                                <text x="16" y="373" text-anchor="end">0.0</text>
+
+                                <line x1="25" y1="290" x2="30" y2="290" stroke-width="1" />
+                                <text x="16" y="293" text-anchor="end">0.25</text>
+
+                                <line x1="25" y1="210" x2="30" y2="210" stroke-width="1" />
+                                <text x="16" y="213" text-anchor="end">0.50</text>
+
+                                <line x1="25" y1="130" x2="30" y2="130" stroke-width="1" />
+                                <text x="16" y="133" text-anchor="end">0.75</text>
+
+                                <line x1="25" y1="50" x2="30" y2="50" stroke-width="1" />
+                                <text x="16" y="53" text-anchor="end">1.0</text>
+
+                                <text class="plot-label-dim" x="42" y="35" text-anchor="start" font-weight="bold">COMPLEXITY INDEX (η)</text>
+                            </g>
+
+                            <!-- Mathematical Silhouettes (Sigmoid & Bell curves) -->
+                            <path class="plot-math-line" d="M 80,350 C 220,350 260,120 400,120" stroke-width="1.2" stroke-dasharray="3 3" fill="none" />
+                            <text class="plot-math-text" x="350" y="112" font-size="7" font-family="monospace">y = 1 / (1 + e^-x)</text>
+
+                            <path class="plot-math-line" d="M 650,380 C 720,380 750,180 800,180 S 880,380 950,380" stroke-width="1.2" stroke-dasharray="3 3" fill="none" />
+                            <text class="plot-math-text" x="800" y="172" font-size="7" font-family="monospace">f(x|μ,σ^2)</text>
+
+                            <!-- Faint data scatter points background -->
+                            <g class="plot-bg-scatter" font-family="monospace" font-size="7">
+                                <text class="plot-scatter-point" x="150" y="120">+</text>
+                                <text class="plot-scatter-coords" x="158" y="120">[0.15, 0.71]</text>
+
+                                <text class="plot-scatter-point" x="320" y="80">+</text>
+                                <text class="plot-scatter-coords" x="328" y="80">[0.32, 0.81]</text>
+
+                                <text class="plot-scatter-point" x="480" y="340">+</text>
+                                <text class="plot-scatter-coords" x="488" y="340">[0.48, 0.19]</text>
+
+                                <text class="plot-scatter-point" x="720" y="290">+</text>
+                                <text class="plot-scatter-coords" x="728" y="290">[0.72, 0.31]</text>
+
+                                <text class="plot-scatter-point" x="840" y="160">+</text>
+                                <text class="plot-scatter-coords" x="848" y="160">[0.84, 0.62]</text>
+                            </g>
+
+                            <!-- Guide lines for coordinate projection (data design) -->
+                            <line id="guide-x" class="plot-guide-line" x1="0" y1="0" x2="0" y2="0" stroke-width="1.2" stroke-dasharray="3 3" opacity="0" style="transition: opacity 0.25s ease;" />
+                            <line id="guide-y" class="plot-guide-line" x1="0" y1="0" x2="0" y2="0" stroke-width="1.2" stroke-dasharray="3 3" opacity="0" style="transition: opacity 0.25s ease;" />
+                            <text id="guide-label" x="0" y="0" font-family="monospace" font-size="9" opacity="0" style="transition: opacity 0.25s ease;"></text>
+
+                            <!-- Node 1: Python -->
+                            <g class="journey-node" data-index="0" data-name="Python" data-status="✓ Completed" data-desc="Core algorithms, OOP, scientific computing" data-color="#3DDC97" transform="translate(50, 370)">
+                                <circle class="node-ripple" r="18" fill="#3DDC97" opacity="0" />
+                                <circle class="node-glow" r="12" fill="#3DDC97" filter="url(#glow-node)" opacity="0.6" />
+                                <circle class="node-core" r="7" fill="#3DDC97" />
+                                <path class="node-check" d="M -2.5,-0.5 L -0.5,1.5 L 2.5,-1.5" fill="none" stroke="#0B0F1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+                            </g>
+
+                            <!-- Node 2: SQL -->
+                            <g class="journey-node" data-index="1" data-name="SQL" data-status="✓ Completed" data-desc="Relational querying, schema design, database optimization" data-color="#4A90D9" transform="translate(155, 330)">
+                                <circle class="node-ripple" r="18" fill="#4A90D9" opacity="0" />
+                                <circle class="node-glow" r="12" fill="#4A90D9" filter="url(#glow-node)" opacity="0.6" />
+                                <circle class="node-core" r="7" fill="#4A90D9" />
+                                <path class="node-check" d="M -2.5,-0.5 L -0.5,1.5 L 2.5,-1.5" fill="none" stroke="#0B0F1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+                            </g>
+
+                            <!-- Node 3: Statistics -->
+                            <g class="journey-node" data-index="2" data-name="Statistics" data-status="✓ Completed" data-desc="Probability distributions, hypothesis testing, regression analysis" data-color="#61DAFB" transform="translate(260, 290)">
+                                <circle class="node-ripple" r="18" fill="#61DAFB" opacity="0" />
+                                <circle class="node-glow" r="12" fill="#61DAFB" filter="url(#glow-node)" opacity="0.6" />
+                                <circle class="node-core" r="7" fill="#61DAFB" />
+                                <path class="node-check" d="M -2.5,-0.5 L -0.5,1.5 L 2.5,-1.5" fill="none" stroke="#0B0F1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+                            </g>
+
+                            <!-- Node 4: Data Analysis -->
+                            <g class="journey-node" data-index="3" data-name="Data Analysis" data-status="✓ Completed" data-desc="Pandas, NumPy, data wrangling, data warehousing" data-color="#2ECC71" transform="translate(365, 250)">
+                                <circle class="node-ripple" r="18" fill="#2ECC71" opacity="0" />
+                                <circle class="node-glow" r="12" fill="#2ECC71" filter="url(#glow-node)" opacity="0.6" />
+                                <circle class="node-core" r="7" fill="#2ECC71" />
+                                <path class="node-check" d="M -2.5,-0.5 L -0.5,1.5 L 2.5,-1.5" fill="none" stroke="#0B0F1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+                            </g>
+
+                            <!-- Node 5: EDA -->
+                            <g class="journey-node" data-index="4" data-name="EDA" data-status="✓ Completed" data-desc="Data profiling, correlation analysis, visualization" data-color="#00B4D8" transform="translate(470, 210)">
+                                <circle class="node-ripple" r="18" fill="#00B4D8" opacity="0" />
+                                <circle class="node-glow" r="12" fill="#00B4D8" filter="url(#glow-node)" opacity="0.6" />
+                                <circle class="node-core" r="7" fill="#00B4D8" />
+                                <path class="node-check" d="M -2.5,-0.5 L -0.5,1.5 L 2.5,-1.5" fill="none" stroke="#0B0F1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+                            </g>
+
+                            <!-- Node 6: Machine Learning -->
+                            <g class="journey-node" data-index="5" data-name="Machine Learning" data-status="✓ Completed" data-desc="Supervised and unsupervised models, validation, features" data-color="#A78BFA" transform="translate(575, 170)">
+                                <circle class="node-ripple" r="18" fill="#A78BFA" opacity="0" />
+                                <circle class="node-glow" r="12" fill="#A78BFA" filter="url(#glow-node)" opacity="0.6" />
+                                <circle class="node-core" r="7" fill="#A78BFA" />
+                                <path class="node-check" d="M -2.5,-0.5 L -0.5,1.5 L 2.5,-1.5" fill="none" stroke="#0B0F1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0" />
+                            </g>
+
+                            <!-- Node 7: Deep Learning (Learning / Ongoing) - visually unique -->
+                            <g class="journey-node dl-node" data-index="6" data-name="Deep Learning" data-status="⏳ Learning / Ongoing" data-desc="Neural networks, PyTorch/TensorFlow fundamentals" data-color="#FF6B6B" transform="translate(680, 130)">
+                                <circle class="node-ripple dl-ripple" r="24" fill="#FF6B6B" opacity="0" />
+                                <circle class="node-glow-amber" r="13" fill="none" stroke="#FF6B6B" stroke-width="2" filter="url(#glow-node)" opacity="0.8" />
+                                <!-- Dashed rotating outer ring -->
+                                <circle class="node-dashed-ring" r="17" fill="none" stroke="#FF6B6B" stroke-width="1.5" stroke-dasharray="4 3" />
+                                <circle class="node-core dl-core" r="6" fill="none" stroke="#FF6B6B" stroke-width="2.5" />
+                            </g>
+                        </svg>
+
+                        <!-- Static Glassmorphic Tooltip for Deep Learning (Permanently visible) -->
+                        <div class="dl-static-card">
+                            <div class="tooltip-badge" style="color: #FF6B6B;">⏳ Learning / Ongoing</div>
+                            <div class="tooltip-title">Deep Learning</div>
+                            <div class="tooltip-desc">Neural networks, PyTorch/TensorFlow fundamentals</div>
+                        </div>
+                    </div>
+
+                    <!-- Single Floating Glassmorphic Tooltip Element -->
+                    <div class="journey-tooltip" id="journey-tooltip">
+                        <div class="tooltip-badge" id="tooltip-badge">✓ Completed</div>
+                        <div class="tooltip-title" id="tooltip-title">HTML</div>
+                        <div class="tooltip-desc" id="tooltip-desc">Structuring layouts.</div>
+                    </div>
+
+                    <!-- Hint Instruction Tag -->
+                    <div class="journey-hint">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hint-icon">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <span>Touch the data points to see my skills</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section scroll-reveal">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="subtitle">My Services</span>
+                    <h2 class="section-title">How I Create Value</h2>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow"></div>
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                        </div>
+                        <h3>Predictive Analytics</h3>
+                        <p>Use historical data to identify patterns and build models that support business forecasting and decision-making.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow" style="--glow-color: rgba(0, 230, 118, 0.12);"></div>
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3>Customer Analytics</h3>
+                        <p>Analyze customer behavior, segmentation, and churn risk to support better customer-focused decisions.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow"></div>
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <h3>Data Cleaning & Feature Engineering</h3>
+                        <p>Transform messy/raw datasets into structured, model-ready data ready for analytics and machine learning pipeline ingestion.</p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow" style="--glow-color: rgba(0, 230, 118, 0.12);"></div>
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        </div>
+                        <h3>Exploratory Data Analysis</h3>
+                        <p>Explore datasets to uncover trends, correlation structures, distributions, anomalies, and actionable operational insights.</p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="service-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow"></div>
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h3>Machine Learning Solutions</h3>
+                        <p>Build practical predictive models for classification, regression, time-series forecasting, and custom analytics business use cases.</p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="service-card magnetic-container" data-tilt>
+                        <div class="card-spots-glow" style="--glow-color: rgba(0, 230, 118, 0.12);"></div>
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h3>AI & WhatsApp Automation</h3>
+                        <p>Build practical WhatsApp-based automation workflows for customer inquiries, lead capture, FAQs, and business processes.</p>
+                    </div>
+                </div>
+            </div>
+        <!-- Hire Me & Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="contact-card-container">
+                    <div class="contact-glow-blur"></div>
+                    <div class="contact-header">
+                        <span class="subtitle">Get In Touch</span>
+                        <h2 class="section-title">Have a Data or AI Problem? Let's Talk.</h2>
+                        <p class="contact-desc">
+                            Whether you need a predictive model, an interactive data analysis report, or automated AI workflows, I am open to discussing projects and collaboration opportunities. Let's work together to turn your data into intelligent decisions.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-actions-grid">
+                        <div class="contact-buttons-group">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScplaceholder/viewform" target="_blank" rel="noopener" class="btn btn-primary btn-lg magnetic">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                Project Enquiry
+                            </a>
+                            <a href="mailto:aarishahamedm.work@gmail.com" class="btn btn-secondary btn-lg magnetic">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                Email Me
+                            </a>
+                        </div>
+                        
+                        <div class="contact-links-grid">
+                            <a href="https://in.linkedin.com/in/aarish-ahamed-m-8109a92a6" target="_blank" rel="noopener" class="social-mini-box magnetic-container">
+                                <div class="box-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                </div>
+                                <span class="box-lbl">LinkedIn</span>
+                                <span class="box-val">aarish-ahamed-m</span>
+                            </a>
+                            <a href="https://github.com/aarishar321-dev" target="_blank" rel="noopener" class="social-mini-box magnetic-container">
+                                <div class="box-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </div>
+                                <span class="box-lbl">GitHub</span>
+                                <span class="box-val">aarishar321-dev</span>
+                            </a>
+                            <a href="https://www.kaggle.com/aarishar321" target="_blank" rel="noopener" class="social-mini-box magnetic-container">
+                                <div class="box-icon" style="display: flex; align-items: center; justify-content: center; height: 20px;">
+                                    <span style="font-family: var(--font-heading); font-weight: 800; font-size: 0.95rem; letter-spacing: -0.05em; line-height: 1;">K</span>
+                                </div>
+                                <span class="box-lbl">Kaggle</span>
+                                <span class="box-val">aarishar321</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <a href="#home" class="footer-logo">
+                <span>Aarish Ahamed M</span>
+            </a>
+            <p class="footer-text">Data Science • Machine Learning • AI Automation</p>
+            <p class="copyright">© 2026 Aarish Ahamed M. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SVM Floating Concept Instruction Badge -->
+    <div class="svm-legend">
+        <span class="legend-badge">Interactive ML Concept</span>
+        <span class="legend-text">Move cursor to explore the SVM classification boundary</span>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
